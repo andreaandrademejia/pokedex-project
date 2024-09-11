@@ -1,0 +1,436 @@
+.pokeinfo {
+	padding-top: 21em;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.pokeinfo__card {
+	width: 60em;
+	padding-bottom: 1em;
+	margin-bottom: 3em;
+	background-color: var(--primary-color);
+
+	.pokeinfo__card-header {
+		width: 100%;
+		aspect-ratio: 1.8;
+		position: relative;
+		margin-bottom: 1em;
+		height: 14em;
+		.pokeinfo__card-img {
+			position: absolute;
+			width: 40%;
+			top: -9em;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+	.pokeinfo__card-number-container {
+		border: 1px solid rgb(226, 226, 226);
+		width: 6em;
+		border-radius: 3px;
+		padding: 0.2em;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+
+	.pokeball__styles {
+		display: flex;
+		padding: 0 5em;
+	}
+
+	.pokeinfo__card-name-container {
+		background-color: var(--primary-color);
+		text-transform: capitalize;
+		text-align: center;
+		font-size: 1.7em;
+		width: 10em;
+		margin: 0 auto;
+	}
+	.pokeinfo__card-measures-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4em;
+		.pokeinfo__card-measures {
+			.pokeinfo__card-measures-label {
+				margin: 0;
+			}
+			.pokeinfo__card-measures-value {
+				text-align: center;
+				font-weight: 800;
+				font-size: larger;
+			}
+		}
+	}
+	.types__abilities-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 2em;
+		margin-top: 1em;
+		text-align: center;
+		.pokeinfo__card-types-abilities-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 1em;
+			.pokeinfo__card-types-abilities-item {
+				width: 10em;
+				font-size: 1.1em;
+				font-weight: 900;
+				color: whitesmoke;
+				text-transform: capitalize;
+				margin-bottom: 1em;
+				margin-top: 1em;
+				border-radius: 2px;
+			}
+			.types__text-border {
+				-webkit-text-stroke: 0.6px black;
+			}
+			.abilities__border {
+				border: 1px solid #cecece;
+				color: var(--text-color);
+			}
+		}
+	}
+}
+.pokeinfo__card-stats-title {
+	padding: 1em 4em;
+}
+.pokeinfo__card-stats-container {
+	padding: 0 5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: larger;
+	font-weight: 600;
+}
+
+.pokeinfo__card-stats-progress {
+	display: grid;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	height: 2.1em;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	&::-webkit-progress-value {
+		background: linear-gradient(to right, rgb(231, 231, 0), orange);
+		border-radius: 5px;
+		transition: width 0.6s ease;
+	}
+	&::-webkit-progress-bar {
+		background-color: #e0e0e0;
+		border-radius: 5px;
+	}
+}
+
+.pokeinfo__moves {
+	width: 60em;
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: var(--primary-color);
+
+	.pokeinfo__moves-title {
+		margin-top: 0.4em;
+		font-size: 2em;
+	}
+
+	.pokeinfo__moves-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+		margin-top: 2em;
+		.pokeinfo__moves-item {
+			background-color: #e0e0e0;
+			color: black;
+			padding: 0.5em 1em;
+			border-radius: 30px;
+			font-size: 1.1em;
+			font-weight: 600;
+		}
+	}
+}
+
+.pokeball {
+	display: flex;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	background-color: #dd1a1a;
+	border: 1px solid black;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(-20deg);
+
+	overflow: hidden;
+	.pokeball__top {
+		height: 50%;
+		width: 110%;
+		border-bottom: 1px solid black;
+	}
+	.pokeball__bottom {
+		height: 50%;
+		width: 110%;
+		background-color: white;
+		border-top: 1px solid black;
+	}
+
+	.pokeball__center {
+		position: absolute;
+		background-color: white;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		z-index: 5;
+		border: 2px solid black;
+	}
+}
+
+/* Background */
+.bg__grass {
+	background: linear-gradient(178.92deg, #7ec6c5 0.92%, #abdac6 47.96%, #cae099 99.08%);
+}
+.bg__fire {
+	background: linear-gradient(176.37deg, #f96d6f -32.26%, #e35825 22.55%, #e8ae1b 125.72%);
+}
+.bg__water {
+	background: linear-gradient(179.57deg, #133258 -70.14%, #1479fb 56.16%, #82b2f1 214.85%);
+}
+.bg__bug {
+	background: linear-gradient(177.56deg, #62db60 -58.92%, #3bb039 16.57%, #aaffa8 209.53%);
+}
+.bg__normal {
+	background: linear-gradient(181.51deg, #735259 -6.44%, #bc6b7c 121.95%, #7c3f4c 186.11%);
+}
+.bg__fighting {
+	background: linear-gradient(176.83deg, #96402a -8.78%, #f1613c 169.09%, #cb735d 242.33%);
+}
+.bg__poison {
+	background: linear-gradient(177.03deg, #5b3184 -11.97%, #a564e3 71.28%, #ce9bff 135.64%);
+}
+.bg__ghost {
+	background: linear-gradient(177.03deg, #323569 -11.97%, #454aa8 57.49%, #787dda 135.64%);
+}
+.bg__rock {
+	background: linear-gradient(177.03deg, #7e7e7e -11.97%, #8d8d94 57.49%, #d3d3d3 135.64%);
+}
+.bg__dark {
+	background: linear-gradient(177.03deg, #030706 -11.97%, #0d1211 57.49%, #5a5e5d 135.64%);
+}
+.bg__ice {
+	background: linear-gradient(177.03deg, #6fbedf -11.97%, #64cbf5 47.77%, #bdebfe 136.72%);
+}
+.bg__steel {
+	background: linear-gradient(179.75deg, #5e736c -19.96%, #728881 43.67%, #a8a8a8 138.4%);
+}
+.bg__dragon {
+	background: linear-gradient(179.75deg, #478a93 -19.96%, #56a4ae 43.67%, #a2bec1 138.4%);
+}
+.bg__fairy {
+	background: linear-gradient(179.75deg, #971b45 -19.96%, #c23867 43.67%, #cd7d98 138.4%);
+}
+.bg__electric {
+	background: linear-gradient(179.75deg, #0c1395 -19.96%, #2b319b 43.67%, #7075d9 138.4%);
+}
+.bg__psychic {
+	background: linear-gradient(179.75deg, #e62d2d -19.96%, #d13e3e 43.67%, #f07f7f 138.4%);
+}
+.bg__ground {
+	background: linear-gradient(179.75deg, #654008 -19.96%, #895c1a 43.67%, #d69638 138.4%);
+}
+.bg__flying {
+	background: linear-gradient(179.75deg, #fffafa -19.96%, #f5f2f2 43.67%, #00e0f0 138.4%);
+}
+/* Border */
+.border__grass {
+	border: 0.4em solid;
+	border-image: linear-gradient(178.92deg, #7ec6c5 0.92%, #abdac6 47.96%, #cae099 99.08%) 1;
+}
+.border__fire {
+	border: 0.4em solid;
+	border-image: linear-gradient(176.37deg, #f96d6f -32.26%, #e35825 22.55%, #e8ae1b 125.72%) 1;
+}
+.border__water {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.57deg, #133258 -70.14%, #1479fb 56.16%, #82b2f1 214.85%) 1;
+}
+.border__bug {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.56deg, #62db60 -58.92%, #3bb039 16.57%, #aaffa8 209.53%) 1;
+}
+.border__normal {
+	border: 0.4em solid;
+	border-image: linear-gradient(181.51deg, #735259 -6.44%, #bc6b7c 121.95%, #7c3f4c 186.11%) 1;
+}
+.border__fighting {
+	border: 0.4em solid;
+	border-image: linear-gradient(176.83deg, #96402a -8.78%, #f1613c 169.09%, #cb735d 242.33%) 1;
+}
+.border__poison {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.03deg, #5b3184 -11.97%, #a564e3 71.28%, #ce9bff 135.64%) 1;
+}
+.border__ghost {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.03deg, #323569 -11.97%, #454aa8 57.49%, #787dda 135.64%) 1;
+}
+.border__rock {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.03deg, #7e7e7e -11.97%, #8d8d94 57.49%, #d3d3d3 135.64%) 1;
+}
+.border__dark {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.03deg, #030706 -11.97%, #0d1211 57.49%, #5a5e5d 135.64%) 1;
+}
+.border__ice {
+	border: 0.4em solid;
+	border-image: linear-gradient(177.03deg, #6fbedf -11.97%, #64cbf5 47.77%, #bdebfe 136.72%) 1;
+}
+.border__steel {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #5e736c -19.96%, #728881 43.67%, #a8a8a8 138.4%) 1;
+}
+.border__dragon {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #478a93 -19.96%, #56a4ae 43.67%, #a2bec1 138.4%) 1;
+}
+.border__fairy {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #971b45 -19.96%, #c23867 43.67%, #cd7d98 138.4%) 1;
+}
+.border__electric {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #0c1395 -19.96%, #2b319b 43.67%, #7075d9 138.4%) 1;
+}
+.border__psychic {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #e62d2d -19.96%, #d13e3e 43.67%, #f07f7f 138.4%) 1;
+}
+.border__ground {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #654008 -19.96%, #895c1a 43.67%, #d69638 138.4%) 1;
+}
+.border__flying {
+	border: 0.4em solid;
+	border-image: linear-gradient(179.75deg, #fffafa -19.96%, #f5f2f2 43.67%, #00e0f0 138.4%) 1;
+}
+/* Name  */
+.text__grass {
+	background: linear-gradient(177.56deg, #62db60 -58.92%, #3bb039 16.57%, #aaffa8 209.53%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__fire {
+	background: linear-gradient(176.37deg, #f96d6f -32.26%, #e35825 22.55%, #e8ae1b 125.72%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__water {
+	background: linear-gradient(179.57deg, #133258 -70.14%, #1479fb 56.16%, #82b2f1 214.85%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__bug {
+	background: linear-gradient(177.56deg, #62db60 -58.92%, #3bb039 16.57%, #aaffa8 209.53%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__normal {
+	background: linear-gradient(181.51deg, #735259 -6.44%, #bc6b7c 121.95%, #7c3f4c 186.11%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__fighting {
+	background: linear-gradient(176.83deg, #96402a -8.78%, #f1613c 169.09%, #cb735d 242.33%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__poison {
+	background: linear-gradient(177.03deg, #5b3184 -11.97%, #a564e3 71.28%, #ce9bff 135.64%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__ghost {
+	background: linear-gradient(177.03deg, #323569 -11.97%, #454aa8 57.49%, #787dda 135.64%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__rock {
+	background: linear-gradient(177.03deg, #7e7e7e -11.97%, #8d8d94 57.49%, #d3d3d3 135.64%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__dark {
+	background: linear-gradient(177.03deg, #030706 -11.97%, #0d1211 57.49%, #5a5e5d 135.64%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__ice {
+	background: linear-gradient(177.03deg, #6fbedf -11.97%, #64cbf5 47.77%, #bdebfe 136.72%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__steel {
+	background: linear-gradient(179.75deg, #5e736c -19.96%, #728881 43.67%, #a8a8a8 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__dragon {
+	background: linear-gradient(179.75deg, #478a93 -19.96%, #56a4ae 43.67%, #a2bec1 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__fairy {
+	background: linear-gradient(179.75deg, #971b45 -19.96%, #c23867 43.67%, #cd7d98 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__electric {
+	background: linear-gradient(179.75deg, #0c1395 -19.96%, #2b319b 43.67%, #7075d9 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__psychic {
+	background: linear-gradient(179.75deg, #e62d2d -19.96%, #d13e3e 43.67%, #f07f7f 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__ground {
+	background: linear-gradient(179.75deg, #654008 -19.96%, #895c1a 43.67%, #d69638 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
+.text__flying {
+	background: linear-gradient(179.75deg, #cac5c5 -19.96%, #5f8ad1 43.67%, #3c6dea 138.4%);
+	background-clip: text;
+	color: transparent;
+	-webkit-text-stroke: 0.2px black;
+}
